@@ -2,13 +2,34 @@
   var app = angular.module('store', []);
 
   app.controller('StoreController', function(){
-    this.product = gem;
+    this.products = gems;
   });
 
-  var gem = {
-    name: 'my product name',
-    price: 4.99,
-    description: 'some awesome description',
-    canPurchase: true
-  }
+  var gems = [
+    {
+      name: 'my product name number 1',
+      price: 4.99,
+      description: 'some awesome description',
+      canPurchase: true
+    },
+    {
+      name: 'my product name number 2',
+      price: 4.99,
+      description: 'some awesome description',
+      canPurchase: true
+    },
+    {
+      name: 'my product name number 3',
+      price: 4.99,
+      description: 'some awesome description',
+      canPurchase: true
+    },
+    {
+      name: 'my product name number 4',
+      price: 4.99,
+      description: 'some awesome description',
+      canPurchase: true
+    }
+  ]
+
 })();
