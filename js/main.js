@@ -8,6 +8,7 @@
   var gem = {
     name: 'my product name',
     price: 4.99,
-    description: 'some awesome description'
+    description: 'some awesome description',
+    canPurchase: true
   }
 })();
