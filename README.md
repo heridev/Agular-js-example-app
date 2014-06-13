@@ -35,4 +35,9 @@ or avoid !negativecondition
 </div>
 
 ```
+#### A little dirty tabs control using directives
+https://github.com/heridev/Agular-js-example-app/commit/8ab2b245c70a1f96a61c8fe99122deac1c94e059
+
+#### Tabs control after some refactoring:
+https://github.com/heridev/Agular-js-example-app/commit/db9c2b2eb0d1e8e2975812bb85bae781c48c264d
 
