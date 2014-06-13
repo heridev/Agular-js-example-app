@@ -10,25 +10,48 @@
       name: 'my product name number 1',
       price: 4.99,
       description: 'some awesome description',
-      canPurchase: true
+      canPurchase: truem
+      image: [
+        {
+          full: 'some-image.png',
+          thumb: 'other-image.png'
+        }
+      ]
     },
     {
       name: 'my product name number 2',
       price: 4.99,
       description: 'some awesome description',
-      canPurchase: true
+      canPurchase: true,
+      image: [
+        {
+          full: 'some-image.png',
+          thumb: 'other-image.png'
+        }
+      ]
+
     },
     {
       name: 'my product name number 3',
       price: 4.99,
       description: 'some awesome description',
-      canPurchase: true
+      canPurchase: true,
+      image: [
+        {
+          full: 'some-image.png',
+          thumb: 'other-image.png'
+        }
     },
     {
       name: 'my product name number 4',
       price: 4.99,
       description: 'some awesome description',
-      canPurchase: true
+      canPurchase: true,
+      image: [
+        {
+          full: 'some-image.png',
+          thumb: 'other-image.png'
+        }
     }
   ]
 
