@@ -21,8 +21,18 @@ They have the structure of:
 #### How to show and image using angular from an object:
 https://github.com/heridev/Agular-js-example-app/commit/e8a2e8aba27ea162c93f103dced0ff7e139a5f9b
 
+#### if you want to show a div or element only if the array is not
+ empty you can code something like:
 
 
+```
+<div class='some-class' ng-show='!myobject.imaages.length'>
+</div>
 
+or avoid !negativecondition
 
+<div class='some-class' ng-hide='myobject.imaages.length'>
+</div>
+
+```
 
