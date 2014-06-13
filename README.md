@@ -11,11 +11,18 @@
 For example a filter that shows the currency and format a price:
 ```
 <h2>{{ product.price | currency }}<h2>
-``
+```
 
 They have the structure of:
 ```
 {{ data | filter:options }}
-``
+```
+
+#### How to show and image using angular from an object:
+https://github.com/heridev/Agular-js-example-app/commit/e8a2e8aba27ea162c93f103dced0ff7e139a5f9b
+
+
+
+
 
 
