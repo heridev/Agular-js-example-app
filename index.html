@@ -45,11 +45,11 @@
           <img ng-src="{{ product.images[0].full }}">
           <button ng-show='product.canPurchase'>Add to Cart</button>
           <div class='additional-information' ng-init= 'tab = 1'>
-            <nav>
+            <nav ng-controller='PanelController as panel'>
               <ul>
-                <li><a href ng-click='tab = 1' ng-class="{ 'active-tab':tab === 1}">First tab</a></li>
-                <li><a ng-click='tab = 2' href ng-class="{ 'active-tab':tab === 2}">Second tab</a></li>
-                <li><a ng-click='tab = 3' href ng-class="{ 'active-tab':tab === 3}">third tab</a></li>
+                <li><a href ng-click="panel.selectTab(1)" ng-class="{ 'active-tab': panel.isSelectedTab(1) }">First tab</a></li>
+                <li><a ng-click="panel.selectTab(2)" href ng-class="{ 'active-tab': panel.isSelectedTab(2)}">Second tab</a></li>
+                <li><a ng-click="panel.selectTab(3)" href ng-class="{ 'active-tab': panel.isSelectedTab(3) }">third tab</a></li>
               </ul>
             </nav>
             <div class='panels'>
