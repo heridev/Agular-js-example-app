@@ -44,8 +44,8 @@
           <p>{{ product.description }}<p>
           <img ng-src="{{ product.images[0].full }}">
           <button ng-show='product.canPurchase'>Add to Cart</button>
-          <div class='additional-information' ng-init= 'tab = 1'>
-            <nav ng-controller='PanelController as panel'>
+          <div class='additional-information' ng-controller='PanelController as panel'>
+            <nav>
               <ul>
                 <li><a href ng-click="panel.selectTab(1)" ng-class="{ 'active-tab': panel.isSelectedTab(1) }">First tab</a></li>
                 <li><a ng-click="panel.selectTab(2)" href ng-class="{ 'active-tab': panel.isSelectedTab(2)}">Second tab</a></li>
@@ -53,17 +53,44 @@
               </ul>
             </nav>
             <div class='panels'>
-              <div class='panel-1' ng-show='tab == 1'>
+              <div class='panel-1' ng-show='panel.isSelectedTab(1)'>
                 <p> Panel numero 1 </p>
               </div>
-              <div class='panel-2' ng-show='tab == 2'>
+              <div class='panel-2' ng-show='panel.isSelectedTab(2)'>
                 <p> Panel numero 2 </p>
               </div>
-              <div class='panel-3' ng-show='tab == 3'>
+              <div class='panel-3' ng-show='panel.isSelectedTab(3)'>
                 <p> Panel numero 3 </p>
               </div>
             </div>
           </div>
+
+          <blockquote ng-repeat='review in product.reviews'>
+            <b>Starts: {{ review.stars}}</b>
+            {{ review.body}}
+            <cite>by: {{ review.author }}</cite>
+          </blockquote>
+
+          <form name='reviewForm' ng-controller = "ReviewController as reviewCtrl" ng-submit = "reviewCtrl.addReview(product)">
+            <blockquote>
+              <b>Starts: {{ reviewCtrl.review.stars}}</b>
+              {{ reviewCtrl.review.body}}
+              <cite>by: {{ reviewCtrl.review.author }}</cite>
+            </blockquote>
+
+            <select ng-model='reviewCtrl.review.stars'>
+              <option value='1'>1 Start</option>
+              <option value='2'>2 Starts</option>
+            </select>
+            <textarea ng-model='reviewCtrl.review.body'>
+            </textarea>
+            <br />
+            <label> By: </label>
+            <input ng-model='reviewCtrl.review.author' type='email' />
+            <br />
+            <input type='submit' value='submit' />
+          </form>
+
         </article>
 
       </div> <!-- #main -->
