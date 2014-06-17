@@ -44,20 +44,8 @@
           <p>{{ product.description }}<p>
           <img ng-src="{{ product.images[0].full }}">
           <button ng-show='product.canPurchase'>Add to Cart</button>
-          <div class='additional-information' ng-controller='PanelController as panel'>
-            <nav>
-              <ul>
-                <li><a href ng-click="panel.selectTab(1)" ng-class="{ 'active-tab': panel.isSelectedTab(1) }">First tab</a></li>
-                <li><a ng-click="panel.selectTab(2)" href ng-class="{ 'active-tab': panel.isSelectedTab(2)}">Second tab</a></li>
-                <li><a ng-click="panel.selectTab(3)" href ng-class="{ 'active-tab': panel.isSelectedTab(3) }">third tab</a></li>
-              </ul>
-            </nav>
-            <div class='panels'>
-              <panel-one></panel-one>
-              <panel-two></panel-two>
-              <panel-three></panel-three>
-            </div>
-          </div>
+
+          <panels ng-controller='PanelController as panel' ></panels>
 
           <blockquote ng-repeat='review in product.reviews'>
             <b>Starts: {{ review.stars}}</b>

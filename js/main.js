@@ -53,7 +53,12 @@
     };
   });
 
-
+  app.directive('panels', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'panels.html'
+    };
+  });
 
   var gems = [
     {
