@@ -45,7 +45,7 @@
           <img ng-src="{{ product.images[0].full }}">
           <button ng-show='product.canPurchase'>Add to Cart</button>
 
-          <panels ng-controller='PanelController as panel' ></panels>
+          <product-panels></product-panels>
 
           <blockquote ng-repeat='review in product.reviews'>
             <b>Starts: {{ review.stars}}</b>

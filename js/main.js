@@ -53,10 +53,22 @@
     };
   });
 
-  app.directive('panels', function(){
+  app.directive('productPanels', function(){
     return {
       restrict: 'E',
-      templateUrl: 'panels.html'
+      templateUrl: 'panels.html',
+      controller: function(){
+        this.tab = 1;
+        this.selectTab = function(setTab){
+          this.tab = setTab;
+        };
+
+        this.isSelectedTab = function(checkTab) {
+          return this.tab === checkTab;
+        };
+      },
+      //this is the alias used for the controller
+      controllerAs: 'panel'
     };
   });
 
