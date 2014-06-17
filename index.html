@@ -39,7 +39,7 @@
       <div class="main wrapper clearfix">
 
         <article ng-repeat='product in store.products'>
-          <h1 ng-include="'product-title.html'">
+          <product-title></product-title>
           <h2>{{ product.price | currency }}<h2>
           <p>{{ product.description }}<p>
           <img ng-src="{{ product.images[0].full }}">
@@ -53,15 +53,9 @@
               </ul>
             </nav>
             <div class='panels'>
-              <div class='panel-1' ng-show='panel.isSelectedTab(1)'>
-                <p> Panel numero 1 </p>
-              </div>
-              <div class='panel-2' ng-show='panel.isSelectedTab(2)'>
-                <p> Panel numero 2 </p>
-              </div>
-              <div class='panel-3' ng-show='panel.isSelectedTab(3)'>
-                <p> Panel numero 3 </p>
-              </div>
+              <panel-one></panel-one>
+              <panel-two></panel-two>
+              <panel-three></panel-three>
             </div>
           </div>
 

@@ -25,6 +25,36 @@
     };
   });
 
+  app.directive('productTitle', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'product-title.html'
+    };
+  });
+
+  app.directive('panelOne', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'tab-1.html'
+    };
+  });
+
+  app.directive('panelTwo', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'tab-2.html'
+    };
+  });
+
+  app.directive('panelThree', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'tab-3.html'
+    };
+  });
+
+
+
   var gems = [
     {
       name: 'my product name number 1',

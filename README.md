@@ -41,3 +41,69 @@ https://github.com/heridev/Agular-js-example-app/commit/8ab2b245c70a1f96a61c8fe9
 #### Tabs control after some refactoring:
 https://github.com/heridev/Agular-js-example-app/commit/db9c2b2eb0d1e8e2975812bb85bae781c48c264d
 
+
+#### Directives
+
+using directives
+
+##### Using attribute directives example:
+
+in your javascript:
+```
+  app.directive('productSpecs', function(){
+    return {
+      restrict: 'A',
+      templateUrl: 'product-specs.html'
+    };
+  });
+```
+
+
+in index.html
+```
+<div ng-show="tab.isSet(2)" product-specs>
+</div>
+```
+
+your product-description.html
+```
+<h4>Specs</h4>
+<ul class="list-unstyled">
+  <li>
+    <strong>Shine</strong>
+    : {{product.shine}}</li>
+  <li>
+    <strong>Faces</strong>
+    : {{product.faces}}</li>
+  <li>
+    <strong>Rarity</strong>
+    : {{product.rarity}}</li>
+  <li>
+    <strong>Color</strong>
+    : {{product.color}}</li>
+</ul>
+```
+
+##### Using element directives example:
+
+in your javascript:
+
+```
+  app.directive('productTitle', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'product-title.html'
+    }
+  });
+```
+
+in your html
+```
+<product-title></product-title>
+```
+
+your template:
+```
+<h2>{{ product.name }}</h2>
+```
+
